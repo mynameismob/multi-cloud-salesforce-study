@@ -21,11 +21,10 @@
     </ul>
   </nav>
   <div class="container">
-    <!-- banner ilustrativo -->
+    <!-- banner sem imagem: título centralizado em fundo colorido -->
     <div class="banner">
-      <img src="images/integration.jpg" alt="Ilustração conceitual de integração de sistemas e dados">
+      <h1>Integrações</h1>
     </div>
-    <h1>Integrações</h1>
     <!-- Visão Geral -->
     <div class="card">
       <h2>Visão Geral</h2>
@@ -34,24 +33,27 @@
     <!-- Padrões de Integração -->
     <div class="card">
       <h2>Padrões e Tipos de Integração</h2>
+      <p>Ao projetar uma integração, escolha o padrão adequado para o cenário. Os padrões a seguir estão resumidos a partir do catálogo oficial de práticas de integração.</p>
       <ul>
-        <li><strong>Integração de Dados:</strong> sincroniza informações entre sistemas para criar uma base unificada. Pode ser em tempo real ou em lote, bidirecional ou unidirecional.</li>
-        <li><strong>Integração de Processos:</strong> orquestra fluxos de trabalho entre sistemas, permitindo que eventos em um aplicativo disparem ações em outro.</li>
-        <li><strong>Integração Virtual:</strong> fornece acesso em tempo real a dados em outros sistemas sem copiar ou armazenar informações, usando técnicas como API e ETL virtual.</li>
-        <li><strong>Middleware vs API:</strong> plataformas de integração (MuleSoft, Zapier) simplificam conexões complexas, enquanto a integração direta via API oferece controle granular, porém exige mais desenvolvimento.</li>
+        <li><strong>Integração de Dados:</strong> mantém dados sincronizados entre sistemas em lote ou em tempo real. Inclui padrões como <em>Batch Data Synchronization</em> (sincronizações periódicas) e <em>Remote Call‑In</em> (sistemas externos executam operações CRUD no Salesforce)【179847091680795†L156-L165】.</li>
+        <li><strong>Integração de Processos:</strong> permite que uma ação em um sistema dispare processos em outro. Os principais padrões são <em>Remote Process Invocation—Request & Reply</em> (Salesforce chama um serviço e aguarda resposta), <em>Remote Process Invocation—Fire and Forget</em> (Salesforce envia um evento sem esperar retorno) e <em>UI Update Based on Data Changes</em> (atualiza a interface quando dados mudam)【179847091680795†L138-L169】.</li>
+        <li><strong>Integração Virtual:</strong> acessa dados externos em tempo real sem replicá-los no Salesforce, garantindo que usuários sempre vejam informações atualizadas. O padrão <em>Data Virtualization</em> se aplica quando consultas em tempo real são preferíveis à cópia de dados【179847091680795†L169-L205】.</li>
+        <li><strong>Tipos de Conexão:</strong> integrações podem ser unidirecionais (dados fluem em uma direção) ou bidirecionais (sincronização em ambos os sistemas). Escolher entre APIs REST/SOAP, Bulk API, Composite API ou Graph API depende do volume de dados e da complexidade da transação.</li>
+        <li><strong>Middleware vs APIs Diretas:</strong> plataformas de integração como MuleSoft, Dell Boomi ou Azure Integration Services oferecem recursos de mapeamento, transformações e monitoramento. Integrações diretas via API proporcionam maior controle, mas requerem mais esforço de desenvolvimento e manutenção.</li>
       </ul>
     </div>
     <!-- Melhores Práticas -->
     <div class="card">
       <h2>Melhores Práticas de Integração</h2>
       <ul>
-        <li><strong>Definir a Estratégia de Negócio:</strong> inicie entendendo os objetivos de negócios e defina o que precisa ser integrado.</li>
-        <li><strong>Colaborar com Stakeholders:</strong> envolva equipes de TI, negócios e usuários finais para identificar requisitos e validar casos de uso.</li>
-        <li><strong>Escolher o Padrão e Ferramenta Corretos:</strong> determine se a integração será em lote, em tempo real, unidirecional ou bidirecional e selecione a plataforma de integração adequada.</li>
-        <li><strong>Avaliar Escalabilidade e Manutenção:</strong> considere o volume de dados, a frequência de atualizações e o custo de manutenção ao projetar a solução.</li>
-        <li><strong>Garantir Integridade de Dados e Processos:</strong> implemente regras de validação, monitoramento e tratamento de erros para manter a qualidade dos dados e a confiabilidade dos processos.</li>
+        <li><strong>Definir Objetivos e Casos de Uso:</strong> antes de integrar, descreva claramente as necessidades de negócio e cenários de uso. Isso ajuda a selecionar o padrão e a tecnologia corretos.</li>
+        <li><strong>Envolver Stakeholders:</strong> colabore com equipes de TI, analistas de negócio e usuários finais para entender requisitos, limitações e expectativas de cada parte【737248555732198†L200-L220】.</li>
+        <li><strong>Escolher Padrão e Ferramentas:</strong> determine se a integração será em lote, em tempo real, unidirecional ou bidirecional; escolha entre middleware (MuleSoft, ETL) ou APIs diretas; e considere ferramentas low‑code como Flow para integrações simples【737248555732198†L253-L265】.</li>
+        <li><strong>Planejar Escalabilidade e Manutenção:</strong> avalie volume de dados, frequência de atualização, requisitos de latência e custos. Pense em arquitetura desacoplada (event‑driven) para suportar grandes volumes e crescimento【179847091680795†L176-L207】.</li>
+        <li><strong>Garantir Integridade e Segurança:</strong> implemente validação, deduplicação e monitoramento de erros; use OAuth para autenticação, respeite limites de chamada, e criptografe dados sensíveis.</li>
+        <li><strong>Testar e Monitorar:</strong> crie ambientes de teste isolados, automatize testes de integração e configure alertas para detectar falhas. Documente fluxos e processos para facilitar manutenção e troubleshooting.</li>
       </ul>
-      <p class="footnote">Fontes: Artigos sobre melhores práticas de integração e documentação oficial do Salesforce.</p>
+      <p class="footnote">Fontes: Guia oficial de padrões de integração e artigos de melhores práticas【179847091680795†L138-L205】【737248555732198†L200-L220】.</p>
     </div>
     <!-- Exemplo Prático -->
     <div class="card">
