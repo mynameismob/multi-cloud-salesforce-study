@@ -21,16 +21,69 @@
     </ul>
   </nav>
   <div class="container">
-    <h2>Integrações</h2>
+    <!-- banner ilustrativo -->
+    <div class="banner">
+      <img src="images/integration.jpg" alt="Ilustração conceitual de integração de sistemas e dados">
+    </div>
+    <h1>Integrações</h1>
+    <!-- Visão Geral -->
     <div class="card">
-      <p>O verdadeiro poder da plataforma Salesforce é liberado quando dados de várias fontes são unificados. Integrar o CRM a sistemas de ERP, bases de dados, plataformas de marketing ou ferramentas de colaboração é crucial para obter uma visão completa do cliente e automatizar processos de ponta a ponta. Uma boa integração mantém conexões estáveis e rápidas entre o Salesforce e outros ambientes de negócios.</p>
-      <p>Existem diferentes métodos e tipos de integração que podem ser utilizados:</p>
+      <h2>Visão Geral</h2>
+      <p>Integrar o Salesforce a ERPs, bancos de dados, plataformas de marketing e outras aplicações libera o poder da plataforma. Uma integração bem planejada consolida informações, automatiza processos e garante que todas as equipes tenham acesso a dados precisos e atualizados.</p>
+    </div>
+    <!-- Padrões de Integração -->
+    <div class="card">
+      <h2>Padrões e Tipos de Integração</h2>
       <ul>
-        <li><strong>Integração em tempo real vs em lote:</strong> a integração em tempo real sincroniza dados assim que ocorrem alterações, garantindo atualizações imediatas em ambos os sistemas. Já a integração em lote processa grandes volumes de dados em intervalos programados, indicada quando não é necessário atualizar informações a cada segundo.</li>
-        <li><strong>Sincronização bidirecional vs unidirecional:</strong> a sincronização bidirecional permite fluxo de dados nos dois sentidos entre os sistemas, mantendo ambos atualizados e evitando inconsistências. A unidirecional envia dados em apenas uma direção e é útil quando se quer preservar a fonte de verdade em um único sistema.</li>
-        <li><strong>Integração via Middleware vs API:</strong> soluções de middleware como MuleSoft, Zapier ou Jitterbit atuam como intermediários, simplificando cenários complexos ao transformar e encaminhar dados. A integração baseada em API utiliza diretamente as APIs do Salesforce para personalização granular, mas pode exigir mais esforço de desenvolvimento.</li>
+        <li><strong>Integração de Dados:</strong> sincroniza informações entre sistemas para criar uma base unificada. Pode ser em tempo real ou em lote, bidirecional ou unidirecional.</li>
+        <li><strong>Integração de Processos:</strong> orquestra fluxos de trabalho entre sistemas, permitindo que eventos em um aplicativo disparem ações em outro.</li>
+        <li><strong>Integração Virtual:</strong> fornece acesso em tempo real a dados em outros sistemas sem copiar ou armazenar informações, usando técnicas como API e ETL virtual.</li>
+        <li><strong>Middleware vs API:</strong> plataformas de integração (MuleSoft, Zapier) simplificam conexões complexas, enquanto a integração direta via API oferece controle granular, porém exige mais desenvolvimento.</li>
       </ul>
-      <p>Para a Dynamics Data, é fundamental escolher a abordagem de integração que equilibre tempo de desenvolvimento, custo e requisitos de performance. Integrar adequadamente as nuvens de vendas, serviço, marketing e finanças com outros sistemas garante consistência nos dados e melhora a experiência do cliente.</p>
+    </div>
+    <!-- Melhores Práticas -->
+    <div class="card">
+      <h2>Melhores Práticas de Integração</h2>
+      <ul>
+        <li><strong>Definir a Estratégia de Negócio:</strong> inicie entendendo os objetivos de negócios e defina o que precisa ser integrado.</li>
+        <li><strong>Colaborar com Stakeholders:</strong> envolva equipes de TI, negócios e usuários finais para identificar requisitos e validar casos de uso.</li>
+        <li><strong>Escolher o Padrão e Ferramenta Corretos:</strong> determine se a integração será em lote, em tempo real, unidirecional ou bidirecional e selecione a plataforma de integração adequada.</li>
+        <li><strong>Avaliar Escalabilidade e Manutenção:</strong> considere o volume de dados, a frequência de atualizações e o custo de manutenção ao projetar a solução.</li>
+        <li><strong>Garantir Integridade de Dados e Processos:</strong> implemente regras de validação, monitoramento e tratamento de erros para manter a qualidade dos dados e a confiabilidade dos processos.</li>
+      </ul>
+      <p class="footnote">Fontes: Artigos sobre melhores práticas de integração e documentação oficial do Salesforce.</p>
+    </div>
+    <!-- Exemplo Prático -->
+    <div class="card">
+      <h2>Exemplo Prático</h2>
+      <p>Imagine que a Dynamics Data precisa integrar o Salesforce com um sistema ERP para acompanhar pedidos e estoque. Um middleware é usado para orquestrar a integração: os pedidos confirmados no Salesforce disparam a criação de ordens no ERP; dados de estoque no ERP alimentam o Salesforce para informar os vendedores em tempo real. Um processo de integração bidirecional garante que ambos os sistemas permaneçam sincronizados. Monitores de integridade alertam rapidamente em caso de falhas, e scripts de reconciliação corrigem inconsistências.</p>
+    </div>
+
+    <!-- Trilha de Aprendizagem -->
+    <div class="card">
+      <h2>Trilha de Aprendizagem</h2>
+      <p>Esta trilha guia você pela evolução das integrações no ecossistema Salesforce, do básico ao avançado, cobrindo APIs, padrões de design e arquiteturas de eventos.</p>
+      <h3>Nível Iniciante</h3>
+      <ul>
+        <li><strong>Conceitos de Integração:</strong> compreenda o propósito da integração, quando usar sincronização de dados vs. orquestração de processos, e a importância da consistência.</li>
+        <li><strong>APIs do Salesforce:</strong> explore as APIs REST e SOAP para CRUD de dados simples. Aprenda a usar o Data Loader e a realizar exportações/importações básicas.</li>
+        <li><strong>Ferramentas de Baixo Código:</strong> conecte-se a aplicações populares utilizando conector integrado (por exemplo, Salesforce Flow com HTTP callouts) ou serviços de automação como Zapier.</li>
+      </ul>
+      <h3>Nível Intermediário</h3>
+      <ul>
+        <li><strong>Padrões de Integração:</strong> estude os padrões Request/Reply, Fire and Forget e Batch Synchronization descritos no catálogo de práticas de integração【179847091680795†L55-L82】.</li>
+        <li><strong>Platform Events e Change Data Capture:</strong> implemente eventos para notificar sistemas externos sobre alterações de dados em tempo real.</li>
+        <li><strong>Middleware e ETL:</strong> utilize plataformas como MuleSoft ou Microsoft Azure Integration Services para mapear campos, transformar dados e orquestrar processos.</li>
+        <li><strong>Segurança Básica:</strong> configure autenticação OAuth, limite de chamadas e política de retry para garantir resiliência.</li>
+      </ul>
+      <h3>Nível Avançado</h3>
+      <ul>
+        <li><strong>Arquitetura de Eventos:</strong> adote um estilo event-driven com Platform Events, Streaming API e Change Data Capture para acionar fluxos e sincronizações assíncronas em múltiplos sistemas.</li>
+        <li><strong>APIs Compostas e Graph:</strong> use a API Composite, Bulk API e Graph API para otimizar chamadas em lote e reduzir latência.</li>
+        <li><strong>Apex e LWC Integration:</strong> desenvolva callouts Apex para consumir serviços REST externos e exponha dados por meio de lightning web components.</li>
+        <li><strong>Monitoramento e Observabilidade:</strong> implemente logs de integração, métricas e alertas para garantir confiabilidade e resolver problemas rapidamente.</li>
+      </ul>
+      <p class="footnote">Fontes: Guia oficial de padrões de integração da Salesforce【179847091680795†L55-L82】 e artigos técnicos.</p>
     </div>
   </div>
 </body>
