@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulação de Entrevista – Salesforce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">Dynamics Data CRM</div>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="salescloud.html">Sales Cloud</a></li>
+      <li><a href="servicecloud.html">Service Cloud</a></li>
+      <li><a href="marketingcloud.html">Marketing Cloud</a></li>
+      <li><a href="financialservices.html">Financial Services Cloud</a></li>
+      <li><a href="integrations.html">Integrações</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="interview.html" class="active">Simulação</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>Simulação de Entrevista</h2>
+    <p>Abaixo você encontra perguntas que a equipe da Dynamics Data poderia fazer em uma entrevista. Responda de forma clara e então clique em <em>Analisar resposta</em> para receber feedback automatizado sobre os pontos abordados.</p>
+    <div class="card">
+      <div class="interview-question">
+        <h3 id="q1-prompt"></h3>
+        <textarea id="q1" placeholder="Digite sua resposta aqui..."></textarea>
+        <button type="button" onclick="evaluateQuestion(0)">Analisar resposta</button>
+        <div class="feedback" id="q1-feedback" style="display:none;"></div>
+      </div>
+      <div class="interview-question">
+        <h3 id="q2-prompt"></h3>
+        <textarea id="q2" placeholder="Digite sua resposta aqui..."></textarea>
+        <button type="button" onclick="evaluateQuestion(1)">Analisar resposta</button>
+        <div class="feedback" id="q2-feedback" style="display:none;"></div>
+      </div>
+      <div class="interview-question">
+        <h3 id="q3-prompt"></h3>
+        <textarea id="q3" placeholder="Digite sua resposta aqui..."></textarea>
+        <button type="button" onclick="evaluateQuestion(2)">Analisar resposta</button>
+        <div class="feedback" id="q3-feedback" style="display:none;"></div>
+      </div>
+      <div class="interview-question">
+        <h3 id="q4-prompt"></h3>
+        <textarea id="q4" placeholder="Digite sua resposta aqui..."></textarea>
+        <button type="button" onclick="evaluateQuestion(3)">Analisar resposta</button>
+        <div class="feedback" id="q4-feedback" style="display:none;"></div>
+      </div>
+      <div class="interview-question">
+        <h3 id="q5-prompt"></h3>
+        <textarea id="q5" placeholder="Digite sua resposta aqui..."></textarea>
+        <button type="button" onclick="evaluateQuestion(4)">Analisar resposta</button>
+        <div class="feedback" id="q5-feedback" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    // Populate prompts dynamically from the questions defined in script.js
+    document.addEventListener('DOMContentLoaded', function () {
+      interviewQuestions.forEach((q, index) => {
+        const promptEl = document.getElementById(`q${index + 1}-prompt`);
+        if (promptEl) {
+          promptEl.textContent = q.prompt;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
